@@ -1,0 +1,7 @@
+{
+  "name": "non-reactive-click",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
