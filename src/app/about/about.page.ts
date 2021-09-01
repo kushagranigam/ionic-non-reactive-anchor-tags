@@ -7,7 +7,13 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class AboutPage implements OnInit, OnDestroy {
 
-  documentClickHandler =  (event: MouseEvent) => { console.log(event.target, 'clicked'); }
+  documentClickHandler =  (event: MouseEvent) => { 
+    let targetElement = event.target as HTMLElement;
+    console.log(targetElement, 'clicked');
+    this.clickItems.push('\'' + targetElement.tagName + '\' element clicked.');
+  };
+  clickItems: Array<string> = [];
+
   constructor() { }
 
   ngOnInit() {

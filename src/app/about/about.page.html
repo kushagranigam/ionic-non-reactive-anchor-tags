@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>about</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,15 +13,16 @@
       <ion-col>
         <p>
           Found this issue: 
-          <a href="#" (click)="wontClick()">Trigger Link</a>
+          <a href="javascript:void(0)" (click)="wontClick()">Trigger Link</a>
           Hope this finds you in time.
         </p>
         <p>
           Another instance of same issue:
-          <a href="#" (click)="wontClick()">Another Trigger Link</a>
+          <a href="javascript:void(0)" (click)="wontClick()">Another Trigger Link</a>
           Just some text.
         </p>
       </ion-col>
     </ion-row>
   </ion-grid>
+  <div *ngFor="let item of clickItems">{{ item }}</div>
 </ion-content>
